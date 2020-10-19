@@ -22,13 +22,18 @@ class LinkedList{
 // Insert to the front
 // If want to keep track of tail, inserting to the front won't change the tail.
     insertFront(data){
+        let node = new Node(data)
         if(!this.head){
-            this.head = this.tail = new Node(data)
+            this.head = this.tail = node
+            node.next = null 
         }
+        // If list is not empty, new node's head will point to the exiting head.
+        // Set new head to be the new nodw
         else{
-            this.head = new Node(data, this.head)
-            
+            node.next = this.head
+            this.head = node 
         }
+        
         this.size += 1
     }
 
@@ -59,6 +64,7 @@ class LinkedList{
         if(!this.head){
             //If its empty, new node = head = tail
             this.head = this.tail = new Node(data)
+
         }else{
             // If its not empty, we do tail.next = new Node(data)
             // Now the new node will also be the new tail.
@@ -141,14 +147,28 @@ class LinkedList{
             let current = this.head
             if(!current) console.log('empty')
             while(current){
-                console.log(current.data)
                 current = current.next
             }
+            console.log(this.size)
         }
+
+        convertListToArray(){
+            let array = []
+            // Loop thru the list, and push every node to the array. Not just the data. 
+            let current = this.head
+            while(current){
+                array.push(current)
+                current= current.next
+            }
+            console.log(array)
+        }
+
 }
 
 
 let ll = new LinkedList();
 ll.insertFront(5)
+ll.insertFront(6)
 ll.printList()
+ll.convertListToArray()
 

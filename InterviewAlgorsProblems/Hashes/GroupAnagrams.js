@@ -3,6 +3,10 @@ An anagram is a word or phrase formed by rearranging the letters of a different 
 
 // Can assume all strings are in lower case.
 /* solution using hash.
+
+Time: O(n * wlogw) , looping once times sort()
+Space: O(1), because hash may only contain 26 letters at most. 
+
 Create empth hash, loop thru every element, if element.sorted() === any esixting key.sorted(), just add element to that group.
 Other wise, create a key of that element, and value to be that element as well.
 

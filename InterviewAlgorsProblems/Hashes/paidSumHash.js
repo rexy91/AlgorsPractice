@@ -21,9 +21,10 @@ let twoSum = (array,target) => {
         // Example, if target is 10, current element is 3, and if (10-3=7) 7 already exsts in the has, [7,3] will be a solution, just return their indexs.
 //* If SumMinusElement doesnt exist in the hash, no solution, ADD THE CURRENT ELEMNT and its index into the  hash, because the next element + this element might be the solution.
                                                 //return the two index that are solution pairs.
-        if (hash[SumMinusElement] !== undefined) {results.push([i, hash[SumMinusElement]])}
+        if (hash[SumMinusElement] !== undefined) {results.push([i, hash[SumMinusElement]])} // If it exist, this statement is executed.
 
         // If it doesn't exist, we push the current element and it's index to the hash, to be used in next loop.
+        // Even if it exist, we still execute the folloiwng statement.
         hash[array[i]] = i
         // console.log('iteration: ' + (i+1), 'hash:' + Object.keys(hash))
         
