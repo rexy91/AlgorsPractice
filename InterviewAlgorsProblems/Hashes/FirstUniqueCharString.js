@@ -12,11 +12,12 @@ return 2 => 'v'  */
                         
 let firstUniqueChar = (string) => {
     let hash = {} 
-
+    let firstUniqueChar
     // Loop thru the string, if letter is a key, increment value by 1, if not, create key with value 1(occruance)
 
     for (let letter of string){
         if(hash[letter]){
+
             hash[letter] += 1 
         }
  
