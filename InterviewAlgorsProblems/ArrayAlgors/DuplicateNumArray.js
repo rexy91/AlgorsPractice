@@ -8,7 +8,7 @@ let findDuplicateNum = (array) =>{
     // Declare a result array, loop thru the given array, if next element equal to current, push next element into result array.
     let resultsArray = new Array
     let uniqueResultsArray = new Array 
-    
+
     for(i=0; i<array.length; i++){   // N   
         if(array[i] === array[i+1]){   // Constant  
             resultsArray.push(array[i+1])  // Constant 
@@ -41,3 +41,29 @@ findDuplicateNum([1,2,3,4,5,6,7,7,6,6,6,6,6,6,10,10,10])
 // Time complexity: 
 // Sequential: two seperate for loop, so =>  n + n = O(n) 
 // Space complexity? 
+
+// Solution 2, use hash , increment by 1 whenever a number is seen. then loop thru the hash to return numbers key that have more than 1 value.(value = occurances of each number)
+// time completiy, two sequential for loop. O(n)
+
+let findDuplicateNum2 = (array) => {
+    let hash = {}
+    let result = []
+    for(let i=0; i<array.length; i++){
+        
+        if (hash[array[i]] === undefined){
+            hash[array[i]] = 1
+        }
+        else{
+            hash[array[i]] += 1
+        }
+    }
+
+    for(number in hash){
+        if(hash[number] !== 1){
+            result.push(parseInt(number))
+        }
+    }
+    return result
+}
+
+console.log(findDuplicateNum2([1,1,2,3,3]))
