@@ -3,15 +3,19 @@
 // return 7
 
 // Time Complexity: O(n), depends on size of the array comparsions. 
+// Sort the array then compare adjcent. 
 
 let findDuplicateNum = (array) =>{
-    // Declare a result array, loop thru the given array, if next element equal to current, push next element into result array.
-    let resultsArray = new Array
-    let uniqueResultsArray = new Array 
+    // Declare a result array, loop thru the sorted array, if next element equal to current, push next element into result array.
 
+    let resultsArray = new Array
+    // If we want unique answers. 
+    let uniqueResultsArray = new Array 
+    let sorted = array.sort( (a,b) => a-b)
+    
     for(i=0; i<array.length; i++){   // N   
-        if(array[i] === array[i+1]){   // Constant  
-            resultsArray.push(array[i+1])  // Constant 
+        if(sorted[i] === sorted[i+1]){   // Constant  
+            resultsArray.push(sorted[i+1])  // Constant 
         }
         // If mulplite duplicates, we need to remove duplicate ansers inside result array.
         // Unique answer:
@@ -32,15 +36,14 @@ let findDuplicateNum = (array) =>{
 
 } 
 // One dupliate:
-findDuplicateNum([1,2,3,4,5,6,7,7,6,10])
-
-// Mulpitale dupliates
-findDuplicateNum([1,2,3,4,5,6,7,7,6,6,6,6,6,6,10,10,10])
-
+// findDuplicateNum([1,2,3,4,5,6,7,7,6,10])
+findDuplicateNum([5,7,5,10,2,3,1,5])
 
 // Time complexity: 
 // Sequential: two seperate for loop, so =>  n + n = O(n) 
 // Space complexity? 
+
+
 
 // Solution 2, use hash , increment by 1 whenever a number is seen. then loop thru the hash to return numbers key that have more than 1 value.(value = occurances of each number)
 // time completiy, two sequential for loop. O(n)
