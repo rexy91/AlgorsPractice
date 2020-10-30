@@ -7,16 +7,21 @@ let testArray = [1,2,3,4,5]
 // Nested for loop ,O(n^2)
 
 let findSubarrays1 = (array) => {
-    let result = []
-    for (let i=0; i<array.length; i++){
-        
-        for (let j=i; i<array.length; j++){
-            
+    let results = []
+    
+    for (let i=0; i<array.length; i++){ 
+                // j < array.length + 1 because  to slice, last element to sliced will need the out of bound index.
+                // Example: [1,2,3], to slice out 3, we need array.slice(2,3), 3 is out of bound index. 
+
+        for (let j=i+1; j<array.length+1; j++){
+            results.push(array.slice(i,j))
         }
     }
     
     
+    return results
+    
 }
 
 
-findSubarrays1([1,2,3,4,5])
+console.log(findSubarrays1([1,2,3]))

@@ -4,7 +4,7 @@
 // One string that is formed from antoher string, case sensitive.
 
 // Solution 1: 
-// Loop thru phase, check if each letter is included inside string.
+// Loop thru phase, check if each letter is included inside other string.
 // Tim complexity will be => N * N (a linear search inside a foor loop) => O(N^2) 
 function checkAnagram1(phase, string){
       
