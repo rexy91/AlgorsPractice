@@ -9,6 +9,23 @@ return 2 => 'v'  */
 
 // Solution with hash map, time compleixity: two seperate for loop, so n + n = O(n)
                         // Space complexity: O{1} , because only 26 letters we need to create for the hash. 
+
+/*
+Process:
+    As we are looping thru the string, we eighter increment existing key of that str by one, or we create that char with value 1.
+    So now the first char with value 1 will be the first unique(non-repeating char).
+    Ex:
+    'loveleetcode' => hash will become:
+        hash={
+            'l': 2
+            'o': 2
+            'v': 1 => first non repeating char. Because order of hash follows order of string. 
+            'e': 4
+            't': 1
+            'c': 1
+
+        }
+*/
                         
 let firstUniqueChar = (string) => {
     let hash = {} 

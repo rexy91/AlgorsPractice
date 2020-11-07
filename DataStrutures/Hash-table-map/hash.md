@@ -32,3 +32,15 @@ Implement hash table , will be using an array.
     - Computes different hash output (indices), at least evenly spread out.
     - Deterministic (same input yields same output)
     
+
+- Hash's keys will be sorted by default if its nums as keys.
+    Ex:
+    let hash = {}
+    hash['5'] = 1
+    hash['3'] = 1
+
+    hash = {
+        '3': 1,
+        '5': 1
+    }
+
