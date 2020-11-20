@@ -45,3 +45,15 @@ hash[sortedString].push(stringsArray[i]')  // Error, hash[sortedString].push is 
   Now string is still 'apple'
 
   string = string.replace('a','z') => Now string is 'zpple' !! 
+
+
+# Array.sort((a,b) => a-b) 
+    Time complexity: O(nlogn)
+    Space Complexity: O(1) // Because it's inplace
+    If we make a copy of the array then sort, will be O(n) space complexity.
+
+# sort array by length of each element:
+    let array = ['leetcode','is','a']
+
+    array.sort((a,b) => (a.length - b.length || a-b)) 
+    

@@ -7,12 +7,10 @@
 
 let findDuplicateNum = (array) =>{
     // Declare a result array, loop thru the sorted array, if next element equal to current, push next element into result array.
-
     let resultsArray = new Array
     // If we want unique answers. 
     let uniqueResultsArray = new Array 
     let sorted = array.sort( (a,b) => a-b)
-    
     for(i=0; i<array.length; i++){   // N   
         if(sorted[i] === sorted[i+1]){   // Constant  
             resultsArray.push(sorted[i+1])  // Constant 
