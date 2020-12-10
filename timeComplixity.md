@@ -10,3 +10,14 @@
         so n + n = 2n => O(n)
 
     
+
+# Rotate Array:
+
+Rotate the array to the right by k steps:
+
+Brute Force:
+Time: O(n*k), because we need to move n elements k times, its n * k, not n * n.
+
+If its nest for loop, where we need to loop thru n elements n time, then its n^2.
+
+** Sometimes if space is O(1), and time is slow, we can safcarfice space for a faster solution. 
