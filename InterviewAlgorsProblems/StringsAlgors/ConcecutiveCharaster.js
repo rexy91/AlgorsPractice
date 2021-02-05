@@ -19,9 +19,6 @@ Loop thru the string, if character is the same as the previous character, increm
 Finally, return max count.
 
 */
-
-
-
 let findPowerOfString = (string) => {
     let previous = ' '
     let results = []

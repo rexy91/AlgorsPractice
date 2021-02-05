@@ -6,6 +6,10 @@
 
     ['hello'].sort() will just return ['hello'], because sort() sorts by each element, not the string itself.
 
+    - .split(''), without any extra space will split every charcter.
+    - 'Rex Ye'.split(' '), with extra space, will sepreate by space => ['Rex','Ye']
+    - 'Rex Ye'.split(' '[1]) => returns index 1 of the splitted array => 'Ye'
+
 # Comparing array:
 ```js
     console.log( ['a', 'e', 't' ] === [ 'a', 'e', 't' ]) // This would be false
@@ -56,4 +60,4 @@ hash[sortedString].push(stringsArray[i]')  // Error, hash[sortedString].push is 
     let array = ['leetcode','is','a']
 
     array.sort((a,b) => (a.length - b.length || a-b)) 
-    
+

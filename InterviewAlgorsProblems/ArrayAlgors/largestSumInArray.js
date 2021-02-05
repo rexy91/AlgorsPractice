@@ -4,8 +4,7 @@ input: [4,5,10,-20] => [4,5,10] => largest sum will be 4+5+10 = 19
 return the largest sum, not the subarray itself.
 */
 
-
-let largestSubarraySum = (array) => {
+let largestSubarraySum = (nums) => {
     
 	//Declare a variable for our current overall maximum sum
     let maxSum = nums[0];
@@ -22,3 +21,5 @@ let largestSubarraySum = (array) => {
 	//return the max sum
   return maxSum;
 }
+console.log(largestSubarraySum([4,5,10,-20]))
+console.log(largestSubarraySum([104,5,10,50])) 

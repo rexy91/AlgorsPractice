@@ -13,7 +13,7 @@ Beause output[0] => 24 , is the product of 2,3,4 but not 1
 // Solution with O(n) time and O(1) time complexity since answer anwser doesn't count as memory for this problem given.
 
 let productExceptSelf = (nums) => {
-
+    
     let left_products = []
     let right_products = []
     let results = []

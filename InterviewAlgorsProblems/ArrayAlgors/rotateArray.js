@@ -65,3 +65,25 @@ let rotateArrayExtraMemorySolution = (nums, k) => {
 
 console.log(rotateArrayExtraMemorySolution([1,2,3,4,5,6,7])) // Its good, cant test here but solution works. 
 
+
+
+
+
+// Simple solution , by popping the last element and move to front k % nums.length times.
+// O(n), Space: O(1)
+
+let rotateArraySimpleSolution = (nums,k) => {
+    k = k % nums.length // We do this because in case there is only 2 elements, but k is 7, so cut down the unecessary roatations.
+
+    for (let i=0; i<k; i++){
+        // Declare a variable to hold the last element once we pop, pop() returns the element itself.
+        const backNum = nums.pop()
+
+        // Move it to the front.
+        nums.unshift(backNum)
+    }
+
+    return nums
+}
+ 
+console.log(rotateArraySimpleSolution([1,2,3,4,5],2)) //4,5,1,2,3

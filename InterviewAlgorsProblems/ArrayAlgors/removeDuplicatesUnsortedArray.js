@@ -98,7 +98,7 @@ let removeDups2 = (array) => {
     }
     return results
 }
-console.log(removeDups2([5,4,4,3,3,1,1,1])) //outpout => [1,3,4,5] for array, or 3 for index bound. 
+console.log(removeDups2([5,4,4,3,3,1,1,1]),'tis') //outpout => [1,3,4,5] for array, or 3 for index bound. 
 console.log(removeDups2([2,2,2,2,2,2,2,2])) //i will be zero, since i never gets incremented, so return index bound 0 => [2]
 
 
@@ -129,6 +129,7 @@ let removeDups3 = (array) => {
 
     // Loop thru hash, the keys will be the unique elements in the array !!!
     // Object.keys(hash) return strings, append them to the array, with parseInt 
+    
     let results = [] 
     Object.keys(hash).forEach(element => {
         results.push(parseInt(element))

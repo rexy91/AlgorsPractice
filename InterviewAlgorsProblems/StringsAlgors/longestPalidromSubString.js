@@ -51,3 +51,6 @@ console.log(findLongestPaliSubstring('aaracecarbnb'))
 // for loop to check if each substring is a palidrome. => O(n)
 // sequial for loop to get lartest answer => O(n)
 // Total: O(n^2) * n+n => O(n^2 * n) => O(n^3) . 
+
+
+// Longest palidrome  

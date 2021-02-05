@@ -11,7 +11,7 @@
 
 // Time complexity:
 // array.sort() takes nlogn .
-    
+
 let findHighestProduct = (array) => {
     let sorted = array.sort((a,b)=> a - b)  // nlogn 
 

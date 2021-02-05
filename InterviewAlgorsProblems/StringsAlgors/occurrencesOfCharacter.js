@@ -16,6 +16,5 @@ let countOccurencesOfChar = (character,string) => {
     return count
 }   
 
-
 console.log(countOccurencesOfChar('a', 'Today is MondAy')) // => 2
 console.log(countOccurencesOfChar('a', 'aaaAAAa)')) // => 7

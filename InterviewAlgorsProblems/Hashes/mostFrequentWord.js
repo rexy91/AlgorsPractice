@@ -6,7 +6,6 @@ output: apple, count = 2
 */
 
 // Using Hash:
-
 let findMostfreWord = (array) => {
     
     let hash = {}
